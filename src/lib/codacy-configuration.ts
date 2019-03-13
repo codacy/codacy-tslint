@@ -37,6 +37,21 @@ interface CodacyTool {
   readonly patterns?: ReadonlyArray<CodacyPattern>;
 }
 
+interface CodacyDefaultTool {
+  readonly name: string;
+  readonly patterns?: ReadonlyArray<CodacyDefaultPattern>;
+}
+
+interface CodacyDefaultPattern {
+  readonly patternId: string;
+  readonly parameters?: ReadonlyArray<CodacyDefaultParameter>;
+}
+
+interface CodacyDefaultParameter {
+  readonly name: string;
+  readonly default: ParameterValue;
+}
+
 interface CodacyConfiguration {
   readonly files: ReadonlyArray<string>;
   readonly tools?: ReadonlyArray<CodacyTool>;
@@ -55,16 +70,26 @@ export default function configFromCodacy(configPath?: string): Configuration {
   };
 }
 
+function loadFileSync(path: string): string | undefined {
+  const content = readFile(path);
+
+  if (!content) {
+    return;
+  }
+
+  return content;
+}
+
 function parseCodacyConfiguration(
   configPath?: string
 ): CodacyConfiguration | undefined {
   const path = configPath || '/.codacyrc';
-  const configFileContents = readFile(path);
+  const configFileContents = loadFileSync(path)
 
   if (!configFileContents) {
     return;
   }
-
+ 
   try {
     const codacyConfig = JSON.parse(configFileContents) as CodacyConfiguration;
     return codacyConfig;
@@ -74,6 +99,44 @@ function parseCodacyConfiguration(
     process.exit(50);
     return;
   }
+}
+
+function loadDefaultPatterns(): CodacyDefaultTool | undefined {
+  const path = '/docs/patterns.json'; //'/Users/goncaloprendi/projects/codacy-tslint/docs/patterns.json';
+  const defaultPatterns = loadFileSync(path)
+
+  if (!defaultPatterns) {
+    return;
+  }
+  try {
+    const tool = JSON.parse(defaultPatterns) as CodacyDefaultTool;
+    return tool; 
+  } catch (err) {
+    // tslint:disable-next-line:no-expression-statement
+    process.stderr.write(`${err}\n`);
+    process.exit(50);
+    return;
+  }
+  return;
+}
+
+function getDefaultParameterForPattern(patternId: string): ParameterValue | boolean {
+  const tool = loadDefaultPatterns()
+  if (!tool || !tool.patterns) {
+    return true;
+  }
+
+  const pattern = tool.patterns.find( pattern => pattern.patternId === patternId );
+  if (!pattern) {
+    return true;
+  }
+
+  if (!pattern.parameters || pattern.parameters.length === 0) {
+    return true;
+  }
+
+  const parameter = pattern.parameters[0]
+  return parameter.default;
 }
 
 function getRawConfigFile(
@@ -88,11 +151,10 @@ function getRawConfigFile(
       const rulesArray: ReadonlyArray<
         RawRulesConfig
       > = toolPatterns.patterns.map((pattern: CodacyPattern) => {
-        const parameter =
-          pattern.parameters && pattern.parameters.length === 1
-            ? pattern.parameters[0].value
-            : true;
-
+        
+        const parameter = pattern.parameters && pattern.parameters.length === 1 ? 
+          pattern.parameters[0].value : getDefaultParameterForPattern(pattern.patternId);
+        
         const wrappedParameter: RawRuleConfig =
           typeof parameter === 'boolean' || parameter instanceof Array
             ? parameter
@@ -107,7 +169,7 @@ function getRawConfigFile(
           : rulesArray.reduce((previousValue, currentValue) => {
               return { ...previousValue, ...currentValue };
             });
-
+          
       return { rules };
     }
   }
