@@ -16,16 +16,24 @@ export default function run(
   options: {
     readonly sourcePath?: string;
     readonly codacyConfigPath?: string;
-    readonly getCodacyConfiguration?: (path: string) => Configuration;
+    readonly fallbackPatterns?: string;
+    readonly getCodacyConfiguration?: (
+      path: string,
+      fallbackPatternsPath: string
+    ) => Configuration;
   } = {}
 ): ReadonlyArray<CodacyIssue> {
   const {
     sourcePath = '/src',
     codacyConfigPath = '/.codacyrc',
+    fallbackPatterns = '/docs/patterns.json',
     getCodacyConfiguration = configFromCodacy
   } = options;
 
-  const { rawConfig, files } = getCodacyConfiguration(codacyConfigPath);
+  const { rawConfig, files } = getCodacyConfiguration(
+    codacyConfigPath,
+    fallbackPatterns
+  );
   const configuration = rawConfig
     ? parseConfigFile(rawConfig)
     : tslint.Configuration.findConfiguration(null, sourcePath).results;

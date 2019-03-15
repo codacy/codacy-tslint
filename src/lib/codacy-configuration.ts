@@ -57,7 +57,10 @@ interface CodacyConfiguration {
   readonly tools?: ReadonlyArray<CodacyTool>;
 }
 
-export default function configFromCodacy(configPath?: string): Configuration {
+export default function configFromCodacy(
+  configPath?: string,
+  fallbackPatternsPath?: string
+): Configuration {
   const codacyConfig = parseCodacyConfiguration(configPath);
 
   if (!codacyConfig) {
@@ -66,7 +69,7 @@ export default function configFromCodacy(configPath?: string): Configuration {
 
   return {
     files: codacyConfig.files,
-    rawConfig: getRawConfigFile(codacyConfig)
+    rawConfig: getRawConfigFile(codacyConfig, fallbackPatternsPath)
   };
 }
 
@@ -84,12 +87,12 @@ function parseCodacyConfiguration(
   configPath?: string
 ): CodacyConfiguration | undefined {
   const path = configPath || '/.codacyrc';
-  const configFileContents = loadFileSync(path)
+  const configFileContents = loadFileSync(path);
 
   if (!configFileContents) {
     return;
   }
- 
+
   try {
     const codacyConfig = JSON.parse(configFileContents) as CodacyConfiguration;
     return codacyConfig;
@@ -101,16 +104,18 @@ function parseCodacyConfiguration(
   }
 }
 
-function loadDefaultPatterns(): CodacyDefaultTool | undefined {
-  const path = '/docs/patterns.json'; //'/Users/goncaloprendi/projects/codacy-tslint/docs/patterns.json';
-  const defaultPatterns = loadFileSync(path)
+function loadDefaultPatterns(
+  fallbackPatternsPath?: string
+): CodacyDefaultTool | undefined {
+  const path = fallbackPatternsPath || '/docs/patterns.json';
+  const defaultPatterns = loadFileSync(path);
 
   if (!defaultPatterns) {
     return;
   }
   try {
     const tool = JSON.parse(defaultPatterns) as CodacyDefaultTool;
-    return tool; 
+    return tool;
   } catch (err) {
     // tslint:disable-next-line:no-expression-statement
     process.stderr.write(`${err}\n`);
@@ -120,13 +125,18 @@ function loadDefaultPatterns(): CodacyDefaultTool | undefined {
   return;
 }
 
-function getDefaultParameterForPattern(patternId: string): ParameterValue | boolean {
-  const tool = loadDefaultPatterns()
+function getDefaultParameterForPattern(
+  patternId: string,
+  fallbackPatternsPath?: string
+): ParameterValue | boolean {
+  const tool = loadDefaultPatterns(fallbackPatternsPath);
   if (!tool || !tool.patterns) {
     return true;
   }
 
-  const pattern = tool.patterns.find( pattern => pattern.patternId === patternId );
+  const pattern = tool.patterns.find(
+    toolPattern => toolPattern.patternId === patternId
+  );
   if (!pattern) {
     return true;
   }
@@ -135,12 +145,13 @@ function getDefaultParameterForPattern(patternId: string): ParameterValue | bool
     return true;
   }
 
-  const parameter = pattern.parameters[0]
+  const parameter = pattern.parameters[0];
   return parameter.default;
 }
 
 function getRawConfigFile(
-  codacyConfig: CodacyConfiguration
+  codacyConfig: CodacyConfiguration,
+  fallbackPatternsPath?: string
 ): RawConfigFile | undefined {
   if (codacyConfig.tools) {
     const toolPatterns = codacyConfig.tools.find(
@@ -151,10 +162,14 @@ function getRawConfigFile(
       const rulesArray: ReadonlyArray<
         RawRulesConfig
       > = toolPatterns.patterns.map((pattern: CodacyPattern) => {
-        
-        const parameter = pattern.parameters && pattern.parameters.length === 1 ? 
-          pattern.parameters[0].value : getDefaultParameterForPattern(pattern.patternId);
-        
+        const parameter =
+          pattern.parameters && pattern.parameters.length === 1
+            ? pattern.parameters[0].value
+            : getDefaultParameterForPattern(
+                pattern.patternId,
+                fallbackPatternsPath
+              );
+
         const wrappedParameter: RawRuleConfig =
           typeof parameter === 'boolean' || parameter instanceof Array
             ? parameter
@@ -169,7 +184,7 @@ function getRawConfigFile(
           : rulesArray.reduce((previousValue, currentValue) => {
               return { ...previousValue, ...currentValue };
             });
-          
+
       return { rules };
     }
   }

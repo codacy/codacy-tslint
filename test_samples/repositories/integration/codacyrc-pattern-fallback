@@ -1,0 +1,13 @@
+{
+  "tools": [
+    {
+      "name": "tslint",
+      "patterns": [
+        {
+          "patternId": "max-line-length"
+        }
+      ]
+    }
+  ],
+  "files": ["test-pattern-fallback.ts"]
+}
