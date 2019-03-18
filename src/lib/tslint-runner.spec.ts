@@ -67,13 +67,13 @@ test('run analysis when codacy config file is found with files and patterns', as
     {
       file: 'test.ts',
       line: 9,
-      message: "'magic numbers' are not allowed",
+      message: "'magic numbers' are not allowed: 42.42",
       patternId: 'no-magic-numbers'
     },
     {
       file: 'test2.ts',
       line: 3,
-      message: "'magic numbers' are not allowed",
+      message: "'magic numbers' are not allowed: 42.42",
       patternId: 'no-magic-numbers'
     }
   ]);

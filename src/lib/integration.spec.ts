@@ -23,7 +23,7 @@ test('run integration test no-magic-numbers and interface-name', async t => {
     {
       file: 'test.ts',
       line: 9,
-      message: "'magic numbers' are not allowed",
+      message: "'magic numbers' are not allowed: 42.42",
       patternId: 'no-magic-numbers'
     }
   ]);
