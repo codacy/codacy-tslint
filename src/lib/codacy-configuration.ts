@@ -122,7 +122,6 @@ function loadDefaultPatterns(
     process.exit(50);
     return;
   }
-  return;
 }
 
 function getDefaultParameterForPattern(
