@@ -28,7 +28,7 @@
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
     "fix:markdown": "remark --rc-path .remarkrc.js *.md -o",
-    "test": "run-s build test:*",
+    "test": "run-s build docs:gen test:*",
     "test:tslint": "tslint --project .",
     "test:prettier": "prettier \"src/**/*.ts\" --list-different",
     "test:unit": "nyc ava",

@@ -28,3 +28,27 @@ test('run integration test no-magic-numbers and interface-name', async t => {
     }
   ]);
 });
+
+test('pattern without configuration should fallback to default values in patterns.json', async t => {
+  const testsPath = path.join(
+    process.cwd(),
+    'test_samples/repositories/integration'
+  );
+
+  const patternsPath = path.join(process.cwd(), 'docs/patterns.json');
+
+  const results = await run({
+    codacyConfigPath: `${testsPath}/codacyrc-pattern-fallback`,
+    fallbackPatterns: patternsPath,
+    sourcePath: testsPath
+  });
+
+  t.deepEqual(results, [
+    {
+      file: 'test-pattern-fallback.ts',
+      line: 1,
+      message: 'Exceeds maximum line length of 120',
+      patternId: 'max-line-length'
+    }
+  ]);
+});
