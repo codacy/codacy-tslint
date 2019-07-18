@@ -1,5 +1,7 @@
-# https://circleci.com/docs/2.0/language-javascript/
-version: 2
+version: 2.1
+
+orbs:
+  codacy: codacy/base@0.1.0
 jobs:
   node_8:
     docker:
@@ -134,4 +136,12 @@ workflows:
           filters:
               branches:
                 only:
+                - master
+      - codacy/tag_version:
+          name: tag_version
+          requires:
+            - publish_dockerhub
+          filters:
+            branches:
+              only:
                 - master
