@@ -1,7 +1,7 @@
 # codacy-tslint
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-tslint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-tslint&utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/65d66b1b6f134ef6b7225d2b66a8987d)](https://www.codacy.com/app/Codacy/codacy-tslint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-tslint&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/640c98652ae14802b4c4f9f0c16e04f4)](https://www.codacy.com/gh/codacy/codacy-tslint?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-tslint&amp;utm_campaign=Badge_Grade)  
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/640c98652ae14802b4c4f9f0c16e04f4)](https://www.codacy.com/gh/codacy/codacy-tslint?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-tslint&utm_campaign=Badge_Coverage)
 [![CircleCI](https://circleci.com/gh/codacy/codacy-tslint.svg?style=svg)](https://circleci.com/gh/codacy/codacy-tslint)
 [![Docker Version](https://images.microbadger.com/badges/version/codacy/codacy-tslint.svg)](https://microbadger.com/images/codacy/codacy-tslint "Get your own version badge on microbadger.com")
 
