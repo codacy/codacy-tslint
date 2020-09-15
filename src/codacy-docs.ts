@@ -4,6 +4,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import { findRule, RuleConstructor, RuleType } from 'tslint';
 import * as configs from 'tslint/lib/configs/all';
+import defaults from './resources/defaults.json';
 
 const allRules: ReadonlyArray<RuleConstructor> = Object.keys(configs.rules)
   .map(ruleName => {
@@ -20,6 +21,9 @@ const allRules: ReadonlyArray<RuleConstructor> = Object.keys(configs.rules)
 const root = path.resolve(__dirname);
 const docsPath = path.resolve(`${root}/../../docs`);
 const descripionPath = path.resolve(`${docsPath}/description`);
+
+// tslint:disable-next-line: no-unsafe-any
+const defaultPatterns: ReadonlyArray<string> = defaults;
 
 /* tslint:disable:no-expression-statement*/
 
@@ -86,6 +90,7 @@ function getPatterns(rules: ReadonlyArray<RuleConstructor>): object {
     return {
       ...parameters,
       category: getCategory(rule.metadata.type),
+      enabled: defaultPatterns.includes(rule.metadata.ruleName),
       level: 'Warning',
       patternId: rule.metadata.ruleName
     };
