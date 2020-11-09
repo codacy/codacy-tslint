@@ -1,0 +1,1412 @@
+[
+  {
+    "parameters": [
+      {
+        "description": "adjacent-overload-signatures",
+        "name": "adjacent-overload-signatures"
+      }
+    ],
+    "description": "Enforces function overloads to be consecutive.",
+    "patternId": "adjacent-overload-signatures",
+    "timeToFix": 5,
+    "title": "Enforces function overloads to be consecutive."
+  },
+  {
+    "parameters": [
+      {
+        "description": "ban-types",
+        "name": "ban-types"
+      }
+    ],
+    "description": "\nBans specific types from being used. Does not ban the\ncorresponding runtime objects from being used.",
+    "patternId": "ban-types",
+    "timeToFix": 5,
+    "title": "\nBans specific types from being used. Does not ban the\ncorresponding runtime objects from being used."
+  },
+  {
+    "description": "Bans \"// @ts-ignore\" comments from being used.",
+    "patternId": "ban-ts-ignore",
+    "timeToFix": 5,
+    "title": "Bans \"// @ts-ignore\" comments from being used."
+  },
+  {
+    "parameters": [
+      {
+        "description": "member-access",
+        "name": "member-access"
+      }
+    ],
+    "description": "Requires explicit visibility declarations for class members.",
+    "patternId": "member-access",
+    "timeToFix": 5,
+    "title": "Requires explicit visibility declarations for class members."
+  },
+  {
+    "parameters": [
+      {
+        "description": "member-ordering",
+        "name": "member-ordering"
+      }
+    ],
+    "description": "Enforces member ordering.",
+    "patternId": "member-ordering",
+    "timeToFix": 5,
+    "title": "Enforces member ordering."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-any",
+        "name": "no-any"
+      }
+    ],
+    "description": "Disallows usages of `any` as a type declaration.",
+    "patternId": "no-any",
+    "timeToFix": 5,
+    "title": "Disallows usages of `any` as a type declaration."
+  },
+  {
+    "description": "Forbids empty interfaces.",
+    "patternId": "no-empty-interface",
+    "timeToFix": 5,
+    "title": "Forbids empty interfaces."
+  },
+  {
+    "description": "Ban the usage of for...in statements.",
+    "patternId": "no-for-in",
+    "timeToFix": 5,
+    "title": "Ban the usage of for...in statements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-import-side-effect",
+        "name": "no-import-side-effect"
+      }
+    ],
+    "description": "Avoid import statements with side-effect.",
+    "patternId": "no-import-side-effect",
+    "timeToFix": 5,
+    "title": "Avoid import statements with side-effect."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-inferrable-types",
+        "name": "no-inferrable-types"
+      }
+    ],
+    "description": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.",
+    "patternId": "no-inferrable-types",
+    "timeToFix": 5,
+    "title": "Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean."
+  },
+  {
+    "description": "Disallows internal `module`",
+    "patternId": "no-internal-module",
+    "timeToFix": 5,
+    "title": "Disallows internal `module`"
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-magic-numbers",
+        "name": "no-magic-numbers"
+      }
+    ],
+    "description": "\nDisallows the use constant number values outside of variable assignments.\nWhen no list of allowed values is specified, -1, 0 and 1 are allowed by default.",
+    "patternId": "no-magic-numbers",
+    "timeToFix": 5,
+    "title": "\nDisallows the use constant number values outside of variable assignments.\nWhen no list of allowed values is specified, -1, 0 and 1 are allowed by default."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-namespace",
+        "name": "no-namespace"
+      }
+    ],
+    "description": "This rule still allows the use of `declare module ... {}`",
+    "patternId": "no-namespace",
+    "timeToFix": 5,
+    "title": "Disallows use of internal `module`s and `namespace`s."
+  },
+  {
+    "description": "Disallows non-null assertions using the `!` postfix operator.",
+    "patternId": "no-non-null-assertion",
+    "timeToFix": 5,
+    "title": "Disallows non-null assertions using the `!` postfix operator."
+  },
+  {
+    "description": "Disallows `/// <reference path=>` imports (use ES6-style imports instead).",
+    "patternId": "no-reference",
+    "timeToFix": 5,
+    "title": "Disallows `/// <reference path=>` imports (use ES6-style imports instead)."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-restricted-globals",
+        "name": "no-restricted-globals"
+      }
+    ],
+    "description": "\nDisallowing usage of specific global variables can be useful if you want to allow\na set of global variables by enabling an environment, but still want to disallow\nsome of those.\n        ",
+    "patternId": "no-restricted-globals",
+    "timeToFix": 5,
+    "title": "Disallow specific global variables."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-this-assignment",
+        "name": "no-this-assignment"
+      }
+    ],
+    "description": "Disallows unnecessary references to `this`.",
+    "patternId": "no-this-assignment",
+    "timeToFix": 5,
+    "title": "Disallows unnecessary references to `this`."
+  },
+  {
+    "description": "\nIn other words, the use of forms such as `var module = require(\"module\")` are banned.\nInstead use ES2015-style imports or `import foo = require('foo')` imports.",
+    "patternId": "no-var-requires",
+    "timeToFix": 5,
+    "title": "Disallows the use of require statements except in import statements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "only-arrow-functions",
+        "name": "only-arrow-functions"
+      }
+    ],
+    "description": "\nNote that non-arrow functions are allowed if 'this' appears somewhere in its body\n(as such functions cannot be converted to arrow functions).\n        ",
+    "patternId": "only-arrow-functions",
+    "timeToFix": 5,
+    "title": "Disallows traditional (non-arrow) function expressions."
+  },
+  {
+    "description": "Recommends a 'for-of' loop over a standard 'for' loop if the index is only used to access the array being iterated.",
+    "patternId": "prefer-for-of",
+    "timeToFix": 5,
+    "title": "Recommends a 'for-of' loop over a standard 'for' loop if the index is only used to access the array being iterated."
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-readonly",
+        "name": "prefer-readonly"
+      }
+    ],
+    "description": "\nIf a private variable is only assigned to in the constructor, it should be declared as `readonly`.\n        ",
+    "patternId": "prefer-readonly",
+    "timeToFix": 5,
+    "title": "Requires that private variables are marked as `readonly` if they're never modified outside of the constructor."
+  },
+  {
+    "parameters": [
+      {
+        "description": "promise-function-async",
+        "name": "promise-function-async"
+      }
+    ],
+    "description": "Requires any function or method that returns a promise to be marked async.",
+    "patternId": "promise-function-async",
+    "timeToFix": 5,
+    "title": "Requires any function or method that returns a promise to be marked async."
+  },
+  {
+    "parameters": [
+      {
+        "description": "typedef",
+        "name": "typedef"
+      }
+    ],
+    "description": "Requires type definitions to exist.",
+    "patternId": "typedef",
+    "timeToFix": 5,
+    "title": "Requires type definitions to exist."
+  },
+  {
+    "parameters": [
+      {
+        "description": "typedef-whitespace",
+        "name": "typedef-whitespace"
+      }
+    ],
+    "description": "Determines if a space is required or not before the colon in a type specifier.",
+    "patternId": "typedef-whitespace",
+    "timeToFix": 5,
+    "title": "Requires or disallows whitespace for type definitions."
+  },
+  {
+    "description": "Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.",
+    "patternId": "unified-signatures",
+    "timeToFix": 5,
+    "title": "Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter."
+  },
+  {
+    "parameters": [
+      {
+        "description": "await-promise",
+        "name": "await-promise"
+      }
+    ],
+    "description": "Warns for an awaited value that is not a Promise.",
+    "patternId": "await-promise",
+    "timeToFix": 5,
+    "title": "Warns for an awaited value that is not a Promise."
+  },
+  {
+    "description": "[Read more about the comma operator here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator).",
+    "patternId": "ban-comma-operator",
+    "timeToFix": 5,
+    "title": "Disallows the comma operator to be used."
+  },
+  {
+    "parameters": [
+      {
+        "description": "curly",
+        "name": "curly"
+      }
+    ],
+    "description": "Enforces braces for `if`/`for`/`do`/`while` statements.",
+    "patternId": "curly",
+    "timeToFix": 5,
+    "title": "Enforces braces for `if`/`for`/`do`/`while` statements."
+  },
+  {
+    "description": "Requires a `for ... in` statement to be filtered with an `if` statement.",
+    "patternId": "forin",
+    "timeToFix": 5,
+    "title": "Requires a `for ... in` statement to be filtered with an `if` statement."
+  },
+  {
+    "description": "\nPrevents using the built-in Function constructor.\n        ",
+    "patternId": "function-constructor",
+    "timeToFix": 5,
+    "title": "\nPrevents using the built-in Function constructor.\n        "
+  },
+  {
+    "description": "This rule only allows labels to be on `do/for/while/switch` statements.",
+    "patternId": "label-position",
+    "timeToFix": 5,
+    "title": "Only allows labels in sensible locations."
+  },
+  {
+    "description": "Disallows use of `arguments.callee`.",
+    "patternId": "no-arg",
+    "timeToFix": 5,
+    "title": "Disallows use of `arguments.callee`."
+  },
+  {
+    "description": "Functions marked async must contain an await or return statement.",
+    "patternId": "no-async-without-await",
+    "timeToFix": 5,
+    "title": "Functions marked async must contain an await or return statement."
+  },
+  {
+    "description": "\nSpecifically, the following bitwise operators are banned:\n`&`, `&=`, `|`, `|=`,\n`^`, `^=`, `<<`, `<<=`,\n`>>`, `>>=`, `>>>`, `>>>=`, and `~`.\nThis rule does not ban the use of `&` and `|` for intersection and union types.",
+    "patternId": "no-bitwise",
+    "timeToFix": 5,
+    "title": "Disallows bitwise operators."
+  },
+  {
+    "description": "This applies to `do-while`, `for`, `if`, and `while` statements and conditional (ternary) expressions.",
+    "patternId": "no-conditional-assignment",
+    "timeToFix": 5,
+    "title": "Disallows any type of assignment in conditionals."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-console",
+        "name": "no-console"
+      }
+    ],
+    "description": "Bans the use of specified `console` methods.",
+    "patternId": "no-console",
+    "timeToFix": 5,
+    "title": "Bans the use of specified `console` methods."
+  },
+  {
+    "description": "Disallows constructor use such as `new Number(foo)` but does not disallow `Number(foo)`.",
+    "patternId": "no-construct",
+    "timeToFix": 5,
+    "title": "Disallows access to the constructors of `String`, `Number`, and `Boolean`."
+  },
+  {
+    "description": "Disallows `debugger` statements.",
+    "patternId": "no-debugger",
+    "timeToFix": 5,
+    "title": "Disallows `debugger` statements."
+  },
+  {
+    "description": "Warns if 'super()' appears twice in a constructor.",
+    "patternId": "no-duplicate-super",
+    "timeToFix": 5,
+    "title": "Warns if 'super()' appears twice in a constructor."
+  },
+  {
+    "description": "Prevents duplicate cases in switch statements.",
+    "patternId": "no-duplicate-switch-case",
+    "timeToFix": 5,
+    "title": "Prevents duplicate cases in switch statements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-duplicate-variable",
+        "name": "no-duplicate-variable"
+      }
+    ],
+    "description": "\nThis rule is only useful when using the `var` keyword -\nthe compiler will detect redeclarations of `let` and `const` variables.",
+    "patternId": "no-duplicate-variable",
+    "timeToFix": 5,
+    "title": "Disallows duplicate variable declarations in the same block scope."
+  },
+  {
+    "description": "Bans usage of the delete operator with computed key expressions.",
+    "patternId": "no-dynamic-delete",
+    "timeToFix": 5,
+    "title": "Bans usage of the delete operator with computed key expressions."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-empty",
+        "name": "no-empty"
+      }
+    ],
+    "description": "Blocks with a comment inside are not considered empty.",
+    "patternId": "no-empty",
+    "timeToFix": 5,
+    "title": "Disallows empty blocks."
+  },
+  {
+    "description": "Disallows `eval` function invocations.",
+    "patternId": "no-eval",
+    "timeToFix": 5,
+    "title": "Disallows `eval` function invocations."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-floating-promises",
+        "name": "no-floating-promises"
+      }
+    ],
+    "description": "Unhandled Promises can cause unexpected behavior, such as resolving at unexpected times.",
+    "patternId": "no-floating-promises",
+    "timeToFix": 5,
+    "title": "Promises returned by functions must be handled appropriately."
+  },
+  {
+    "description": "\nA for-in loop (`for (var k in o)`) iterates over the properties of an Object.\n\nWhile it is legal to use for-in loops with array types, it is not common.\nfor-in will iterate over the indices of the array as strings, omitting any \"holes\" in\nthe array.\n\nMore common is to use for-of, which iterates over the values of an array.\nIf you want to iterate over the indices, alternatives include:\n\narray.forEach((value, index) => { ... });\nfor (const [index, value] of array.entries()) { ... }\nfor (let i = 0; i < array.length; i++) { ... }\n",
+    "patternId": "no-for-in-array",
+    "timeToFix": 5,
+    "title": "Disallows iterating over an array with a for-in loop."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-implicit-dependencies",
+        "name": "no-implicit-dependencies"
+      }
+    ],
+    "description": "\nDisallows importing transient dependencies and modules installed above your package's root directory.\n        ",
+    "patternId": "no-implicit-dependencies",
+    "timeToFix": 5,
+    "title": "Disallows importing modules that are not listed as dependency in the project's package.json"
+  },
+  {
+    "description": "Disallow type inference of {} (empty object type) at function and constructor call sites",
+    "patternId": "no-inferred-empty-object-type",
+    "timeToFix": 5,
+    "title": "Disallow type inference of {} (empty object type) at function and constructor call sites"
+  },
+  {
+    "description": "Warns on use of `${` in non-template strings.",
+    "patternId": "no-invalid-template-strings",
+    "timeToFix": 5,
+    "title": "Warns on use of `${` in non-template strings."
+  },
+  {
+    "description": "Warns on apparent attempts to define constructors for interfaces or `new` for classes.",
+    "patternId": "no-misused-new",
+    "timeToFix": 5,
+    "title": "Warns on apparent attempts to define constructors for interfaces or `new` for classes."
+  },
+  {
+    "description": "Disallows use of the `null` keyword literal.",
+    "patternId": "no-null-keyword",
+    "timeToFix": 5,
+    "title": "Disallows use of the `null` keyword literal."
+  },
+  {
+    "description": "\nDisallows explicitly declared or implicitly returned union types with both `null` and\n`undefined` as members.\n        ",
+    "patternId": "no-null-undefined-union",
+    "timeToFix": 5,
+    "title": "\nDisallows explicitly declared or implicitly returned union types with both `null` and\n`undefined` as members.\n        "
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-object-literal-type-assertion",
+        "name": "no-object-literal-type-assertion"
+      }
+    ],
+    "description": "\nForbids an object literal to appear in a type assertion expression.\nCasting to `any` or to `unknown` is still allowed.",
+    "patternId": "no-object-literal-type-assertion",
+    "timeToFix": 5,
+    "title": "\nForbids an object literal to appear in a type assertion expression.\nCasting to `any` or to `unknown` is still allowed."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-promise-as-boolean",
+        "name": "no-promise-as-boolean"
+      }
+    ],
+    "description": "\nFor the most accurate findings, set `\"strict\": true` in your `tsconfig.json`.\n\nIt's recommended to enable the following rules as well:\n* [`strict-boolean-expressions`](https://palantir.github.io/tslint/rules/strict-boolean-expressions/)\n* [`strict-type-predicates`](https://palantir.github.io/tslint/rules/strict-type-predicates/)\n* [`no-floating-promises`](https://palantir.github.io/tslint/rules/no-floating-promises/)\n        ",
+    "patternId": "no-promise-as-boolean",
+    "timeToFix": 5,
+    "title": "Warns for Promises that are used for boolean conditions."
+  },
+  {
+    "description": "Disallows unnecessary `return await`.",
+    "patternId": "no-return-await",
+    "timeToFix": 5,
+    "title": "Disallows unnecessary `return await`."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-shadowed-variable",
+        "name": "no-shadowed-variable"
+      }
+    ],
+    "description": "Disallows shadowing variable declarations.",
+    "patternId": "no-shadowed-variable",
+    "timeToFix": 5,
+    "title": "Disallows shadowing variable declarations."
+  },
+  {
+    "description": "\nForbids unnecessary string literal property access.\nAllows `obj[\"prop-erty\"]` (can't be a regular property access).\nDisallows `obj[\"property\"]` (should be `obj.property`).",
+    "patternId": "no-string-literal",
+    "timeToFix": 5,
+    "title": "\nForbids unnecessary string literal property access.\nAllows `obj[\"prop-erty\"]` (can't be a regular property access).\nDisallows `obj[\"property\"]` (should be `obj.property`)."
+  },
+  {
+    "description": "Flags throwing plain strings or concatenations of strings.",
+    "patternId": "no-string-throw",
+    "timeToFix": 5,
+    "title": "Flags throwing plain strings or concatenations of strings."
+  },
+  {
+    "description": "Forbids array literals to contain missing elements.",
+    "patternId": "no-sparse-arrays",
+    "timeToFix": 5,
+    "title": "Forbids array literals to contain missing elements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-submodule-imports",
+        "name": "no-submodule-imports"
+      }
+    ],
+    "description": "\nDisallows importing any submodule.",
+    "patternId": "no-submodule-imports",
+    "timeToFix": 5,
+    "title": "\nDisallows importing any submodule."
+  },
+  {
+    "description": "\nEnforces that relational/equality binary operators does not take two equal variables/literals as operands.\nExpression like 3 === 3, someVar === someVar, \"1\" > \"1\" are either a tautology or contradiction, and will produce an error.\n",
+    "patternId": "no-tautology-expression",
+    "timeToFix": 5,
+    "title": "\nEnforces that relational/equality binary operators does not take two equal variables/literals as operands.\nExpression like 3 === 3, someVar === someVar, \"1\" > \"1\" are either a tautology or contradiction, and will produce an error.\n"
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-unbound-method",
+        "name": "no-unbound-method"
+      }
+    ],
+    "description": "Warns when a method is used outside of a method call.",
+    "patternId": "no-unbound-method",
+    "timeToFix": 5,
+    "title": "Warns when a method is used outside of a method call."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-unnecessary-class",
+        "name": "no-unnecessary-class"
+      }
+    ],
+    "description": "\nDisallows classes that are not strictly necessary.",
+    "patternId": "no-unnecessary-class",
+    "timeToFix": 5,
+    "title": "\nDisallows classes that are not strictly necessary."
+  },
+  {
+    "description": "\nWarns when using an expression of type 'any' in a dynamic way.\nUses are only allowed if they would work for `{} | null | undefined`.\nDowncasting to unknown is always safe.\nType casts and tests are allowed.\nExpressions that work on all values (such as `\"\" + x`) are allowed.",
+    "patternId": "no-unsafe-any",
+    "timeToFix": 5,
+    "title": "\nWarns when using an expression of type 'any' in a dynamic way.\nUses are only allowed if they would work for `{} | null | undefined`.\nDowncasting to unknown is always safe.\nType casts and tests are allowed.\nExpressions that work on all values (such as `\"\" + x`) are allowed."
+  },
+  {
+    "description": "\nDisallows control flow statements, such as `return`, `continue`,\n`break` and `throws` in finally blocks.",
+    "patternId": "no-unsafe-finally",
+    "timeToFix": 5,
+    "title": "\nDisallows control flow statements, such as `return`, `continue`,\n`break` and `throws` in finally blocks."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-unused-expression",
+        "name": "no-unused-expression"
+      }
+    ],
+    "description": "\nUnused expressions are expression statements which are not assignments or function calls\n(and thus usually no-ops).",
+    "patternId": "no-unused-expression",
+    "timeToFix": 5,
+    "title": "Disallows unused expression statements."
+  },
+  {
+    "description": "\nThis rule is primarily useful when using the `var` keyword since the compiler will\nautomatically detect if a block-scoped `let` and `const` variable is used before\ndeclaration. Since most modern TypeScript doesn't use `var`, this rule is generally\ndiscouraged and is kept around for legacy purposes. It is slow to compute, is not\nenabled in the built-in configuration presets, and should not be used to inform TSLint\ndesign decisions.\n        ",
+    "patternId": "no-use-before-declare",
+    "timeToFix": 5,
+    "title": "Disallows usage of variables before their declaration."
+  },
+  {
+    "description": "Use `let` or `const` instead.",
+    "patternId": "no-var-keyword",
+    "timeToFix": 5,
+    "title": "Disallows usage of the `var` keyword."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-void-expression",
+        "name": "no-void-expression"
+      }
+    ],
+    "description": "Requires expressions of type `void` to appear in statement position.",
+    "patternId": "no-void-expression",
+    "timeToFix": 5,
+    "title": "Requires expressions of type `void` to appear in statement position."
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-conditional-expression",
+        "name": "prefer-conditional-expression"
+      }
+    ],
+    "description": "\nRecommends to use a conditional expression instead of assigning to the same thing in each branch of an if statement.",
+    "patternId": "prefer-conditional-expression",
+    "timeToFix": 5,
+    "title": "\nRecommends to use a conditional expression instead of assigning to the same thing in each branch of an if statement."
+  },
+  {
+    "description": "Requires the radix parameter to be specified when calling `parseInt`.",
+    "patternId": "radix",
+    "timeToFix": 5,
+    "title": "Requires the radix parameter to be specified when calling `parseInt`."
+  },
+  {
+    "description": "When adding two variables, operands must both be of type number or of type string.",
+    "patternId": "restrict-plus-operands",
+    "timeToFix": 5,
+    "title": "When adding two variables, operands must both be of type number or of type string."
+  },
+  {
+    "description": "Ban the use of `this` in static methods.",
+    "patternId": "static-this",
+    "timeToFix": 5,
+    "title": "Ban the use of `this` in static methods."
+  },
+  {
+    "parameters": [
+      {
+        "description": "strict-boolean-expressions",
+        "name": "strict-boolean-expressions"
+      }
+    ],
+    "description": "\nRestricts the types allowed in boolean expressions. By default only booleans are allowed.\n\nThe following nodes are checked:\n\n* Arguments to the `!`, `&&`, and `||` operators\n* The condition in a conditional expression (`cond ? x : y`)\n* Conditions for `if`, `for`, `while`, and `do-while` statements.",
+    "patternId": "strict-boolean-expressions",
+    "timeToFix": 5,
+    "title": "\nRestricts the types allowed in boolean expressions. By default only booleans are allowed.\n\nThe following nodes are checked:\n\n* Arguments to the `!`, `&&`, and `||` operators\n* The condition in a conditional expression (`cond ? x : y`)\n* Conditions for `if`, `for`, `while`, and `do-while` statements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "strict-string-expressions",
+        "name": "strict-string-expressions"
+      }
+    ],
+    "description": "\nRequire explicit toString() call for variables used in strings. By default only strings are allowed.\n\nThe following nodes are checked:\n\n* String literals (\"foo\" + bar)\n* ES6 templates (`foo ${bar}`)",
+    "patternId": "strict-string-expressions",
+    "timeToFix": 5,
+    "title": "Disable implicit toString() calls"
+  },
+  {
+    "parameters": [
+      {
+        "description": "strict-comparisons",
+        "name": "strict-comparisons"
+      }
+    ],
+    "description": "Only allow comparisons between primitives.",
+    "patternId": "strict-comparisons",
+    "timeToFix": 5,
+    "title": "Only allow comparisons between primitives."
+  },
+  {
+    "description": "\nWarns for type predicates that are always true or always false.\nWorks for 'typeof' comparisons to constants (e.g. 'typeof foo === \"string\"'), and equality comparison to 'null'/'undefined'.\n(TypeScript won't let you compare '1 === 2', but it has an exception for '1 === undefined'.)\nDoes not yet work for 'instanceof'.\nDoes *not* warn for 'if (x.y)' where 'x.y' is always truthy. For that, see strict-boolean-expressions.\n\nThis rule requires `strictNullChecks` to work properly.",
+    "patternId": "strict-type-predicates",
+    "timeToFix": 5,
+    "title": "\nWarns for type predicates that are always true or always false.\nWorks for 'typeof' comparisons to constants (e.g. 'typeof foo === \"string\"'), and equality comparison to 'null'/'undefined'.\n(TypeScript won't let you compare '1 === 2', but it has an exception for '1 === undefined'.)\nDoes not yet work for 'instanceof'.\nDoes *not* warn for 'if (x.y)' where 'x.y' is always truthy. For that, see strict-boolean-expressions.\n\nThis rule requires `strictNullChecks` to work properly."
+  },
+  {
+    "description": "Require a `default` case in all `switch` statements.",
+    "patternId": "switch-default",
+    "timeToFix": 5,
+    "title": "Require a `default` case in all `switch` statements."
+  },
+  {
+    "parameters": [
+      {
+        "description": "triple-equals",
+        "name": "triple-equals"
+      }
+    ],
+    "description": "Requires `===` and `!==` in place of `==` and `!=`.",
+    "patternId": "triple-equals",
+    "timeToFix": 5,
+    "title": "Requires `===` and `!==` in place of `==` and `!=`."
+  },
+  {
+    "description": "Prevents blank constructors, as they are redundant.",
+    "patternId": "unnecessary-constructor",
+    "timeToFix": 5,
+    "title": "Prevents blank constructors, as they are redundant."
+  },
+  {
+    "description": "Warns if an explicitly specified type argument is the default for that type parameter.",
+    "patternId": "use-default-type-parameter",
+    "timeToFix": 5,
+    "title": "Warns if an explicitly specified type argument is the default for that type parameter."
+  },
+  {
+    "description": "Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant.",
+    "patternId": "use-isnan",
+    "timeToFix": 5,
+    "title": "Enforces use of the `isNaN()` function to check for NaN references instead of a comparison to the `NaN` constant."
+  },
+  {
+    "parameters": [
+      {
+        "description": "cyclomatic-complexity",
+        "name": "cyclomatic-complexity"
+      }
+    ],
+    "description": "\nCyclomatic complexity is assessed for each function of any type. A starting value of 0\nis assigned and this value is then incremented for every statement which can branch the\ncontrol flow within the function. The following statements and expressions contribute\nto cyclomatic complexity:\n* `catch`\n* `if` and `? :`\n* `||` and `&&` due to short-circuit evaluation\n* `for`, `for in` and `for of` loops\n* `while` and `do while` loops\n* `case` clauses that contain statements",
+    "patternId": "cyclomatic-complexity",
+    "timeToFix": 5,
+    "title": "Enforces a threshold of cyclomatic complexity."
+  },
+  {
+    "description": "Fix for single-line files is not supported.",
+    "patternId": "eofline",
+    "timeToFix": 5,
+    "title": "Ensures the file ends with a newline."
+  },
+  {
+    "parameters": [
+      {
+        "description": "indent",
+        "name": "indent"
+      }
+    ],
+    "description": "Enforces indentation with tabs or spaces.",
+    "patternId": "indent",
+    "timeToFix": 5,
+    "title": "Enforces indentation with tabs or spaces."
+  },
+  {
+    "description": "\nDisallows usage of `void` type outside of return type.\nIf `void` is used as return type, it shouldn't be a part of intersection/union type.",
+    "patternId": "invalid-void",
+    "timeToFix": 5,
+    "title": "\nDisallows usage of `void` type outside of return type.\nIf `void` is used as return type, it shouldn't be a part of intersection/union type."
+  },
+  {
+    "parameters": [
+      {
+        "description": "linebreak-style",
+        "name": "linebreak-style"
+      }
+    ],
+    "description": "Enforces a consistent linebreak style.",
+    "patternId": "linebreak-style",
+    "timeToFix": 5,
+    "title": "Enforces a consistent linebreak style."
+  },
+  {
+    "parameters": [
+      {
+        "description": "max-classes-per-file",
+        "name": "max-classes-per-file"
+      }
+    ],
+    "description": "\nA file may not contain more than the specified number of classes",
+    "patternId": "max-classes-per-file",
+    "timeToFix": 5,
+    "title": "\nA file may not contain more than the specified number of classes"
+  },
+  {
+    "parameters": [
+      {
+        "description": "max-file-line-count",
+        "name": "max-file-line-count"
+      }
+    ],
+    "description": "Requires files to remain under a certain number of lines",
+    "patternId": "max-file-line-count",
+    "timeToFix": 5,
+    "title": "Requires files to remain under a certain number of lines"
+  },
+  {
+    "parameters": [
+      {
+        "description": "max-line-length",
+        "name": "max-line-length"
+      }
+    ],
+    "description": "Requires lines to be under a certain max length.",
+    "patternId": "max-line-length",
+    "timeToFix": 5,
+    "title": "Requires lines to be under a certain max length."
+  },
+  {
+    "description": "Use named exports instead.",
+    "patternId": "no-default-export",
+    "timeToFix": 5,
+    "title": "Disallows default exports in ES6-style modules."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-default-import",
+        "name": "no-default-import"
+      }
+    ],
+    "description": "Import named members instead.",
+    "patternId": "no-default-import",
+    "timeToFix": 5,
+    "title": "Disallows importing default members from certain ES6-style modules."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-duplicate-imports",
+        "name": "no-duplicate-imports"
+      }
+    ],
+    "description": "\nDisallows multiple import statements from the same module.",
+    "patternId": "no-duplicate-imports",
+    "timeToFix": 5,
+    "title": "\nDisallows multiple import statements from the same module."
+  },
+  {
+    "description": "Disallow irregular whitespace within a file, including strings and comments.",
+    "patternId": "no-irregular-whitespace",
+    "timeToFix": 5,
+    "title": "Disallow irregular whitespace within a file, including strings and comments."
+  },
+  {
+    "description": "Disallows mergeable namespaces in the same file.",
+    "patternId": "no-mergeable-namespace",
+    "timeToFix": 5,
+    "title": "Disallows mergeable namespaces in the same file."
+  },
+  {
+    "description": "Disallows reassigning parameters.",
+    "patternId": "no-parameter-reassignment",
+    "timeToFix": 5,
+    "title": "Disallows reassigning parameters."
+  },
+  {
+    "description": "Disallows invocation of `require()`.",
+    "patternId": "no-require-imports",
+    "timeToFix": 5,
+    "title": "Disallows invocation of `require()`."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-trailing-whitespace",
+        "name": "no-trailing-whitespace"
+      }
+    ],
+    "description": "Disallows trailing whitespace at the end of a line.",
+    "patternId": "no-trailing-whitespace",
+    "timeToFix": 5,
+    "title": "Disallows trailing whitespace at the end of a line."
+  },
+  {
+    "parameters": [
+      {
+        "description": "object-literal-sort-keys",
+        "name": "object-literal-sort-keys"
+      }
+    ],
+    "description": "\nChecks ordering of keys in object literals.\n\nWhen using the default alphabetical ordering, additional blank lines may be used to group\nobject properties together while keeping the elements within each group in alphabetical order.\nTo opt out of this use ignore-blank-lines option.\n        ",
+    "patternId": "object-literal-sort-keys",
+    "timeToFix": 5,
+    "title": "\nChecks ordering of keys in object literals.\n\nWhen using the default alphabetical ordering, additional blank lines may be used to group\nobject properties together while keeping the elements within each group in alphabetical order.\nTo opt out of this use ignore-blank-lines option.\n        "
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-const",
+        "name": "prefer-const"
+      }
+    ],
+    "description": "\nIf a variable is only assigned to once when it is declared, it should be declared using 'const'",
+    "patternId": "prefer-const",
+    "timeToFix": 5,
+    "title": "Requires that variable declarations use `const` instead of `let` and `var` if possible."
+  },
+  {
+    "parameters": [
+      {
+        "description": "trailing-comma",
+        "name": "trailing-comma"
+      }
+    ],
+    "description": "\nRequires or disallows trailing commas in array and object literals, destructuring assignments, function typings,\nnamed imports and exports and function parameters.",
+    "patternId": "trailing-comma",
+    "timeToFix": 5,
+    "title": "\nRequires or disallows trailing commas in array and object literals, destructuring assignments, function typings,\nnamed imports and exports and function parameters."
+  },
+  {
+    "parameters": [
+      {
+        "description": "align",
+        "name": "align"
+      }
+    ],
+    "description": "Enforces vertical alignment.",
+    "patternId": "align",
+    "timeToFix": 5,
+    "title": "Enforces vertical alignment."
+  },
+  {
+    "parameters": [
+      {
+        "description": "array-type",
+        "name": "array-type"
+      }
+    ],
+    "description": "Requires using either 'T[]' or 'Array<T>' for arrays.",
+    "patternId": "array-type",
+    "timeToFix": 5,
+    "title": "Requires using either 'T[]' or 'Array<T>' for arrays."
+  },
+  {
+    "parameters": [
+      {
+        "description": "arrow-parens",
+        "name": "arrow-parens"
+      }
+    ],
+    "description": "Requires parentheses around the parameters of arrow function definitions.",
+    "patternId": "arrow-parens",
+    "timeToFix": 5,
+    "title": "Requires parentheses around the parameters of arrow function definitions."
+  },
+  {
+    "parameters": [
+      {
+        "description": "arrow-return-shorthand",
+        "name": "arrow-return-shorthand"
+      }
+    ],
+    "description": "Suggests to convert `() => { return x; }` to `() => x`.",
+    "patternId": "arrow-return-shorthand",
+    "timeToFix": 5,
+    "title": "Suggests to convert `() => { return x; }` to `() => x`."
+  },
+  {
+    "description": "\nIn a binary expression, a literal should always be on the right-hand side if possible.\nFor example, prefer 'x + 1' over '1 + x'.",
+    "patternId": "binary-expression-operand-order",
+    "timeToFix": 5,
+    "title": "\nIn a binary expression, a literal should always be on the right-hand side if possible.\nFor example, prefer 'x + 1' over '1 + x'."
+  },
+  {
+    "description": "An interface or literal type with just a call signature can be written as a function type.",
+    "patternId": "callable-types",
+    "timeToFix": 5,
+    "title": "An interface or literal type with just a call signature can be written as a function type."
+  },
+  {
+    "description": "Enforces PascalCased class and interface names.",
+    "patternId": "class-name",
+    "timeToFix": 5,
+    "title": "Enforces PascalCased class and interface names."
+  },
+  {
+    "parameters": [
+      {
+        "description": "comment-format",
+        "name": "comment-format"
+      }
+    ],
+    "description": "Enforces formatting rules for single-line comments.",
+    "patternId": "comment-format",
+    "timeToFix": 5,
+    "title": "Enforces formatting rules for single-line comments."
+  },
+  {
+    "parameters": [
+      {
+        "description": "comment-type",
+        "name": "comment-type"
+      }
+    ],
+    "description": "Allows a limited set of comment types",
+    "patternId": "comment-type",
+    "timeToFix": 5,
+    "title": "Allows a limited set of comment types"
+  },
+  {
+    "parameters": [
+      {
+        "description": "completed-docs",
+        "name": "completed-docs"
+      }
+    ],
+    "description": "Enforces JSDoc comments for important items be filled out.",
+    "patternId": "completed-docs",
+    "timeToFix": 5,
+    "title": "Enforces JSDoc comments for important items be filled out."
+  },
+  {
+    "description": "Any usage of an identifier\n            with the @deprecated JSDoc annotation will trigger a warning.\n            See http://usejsdoc.org/tags-deprecated.html",
+    "patternId": "deprecation",
+    "timeToFix": 5,
+    "title": "Warns when deprecated APIs are used."
+  },
+  {
+    "description": "Enforces UTF-8 file encoding.",
+    "patternId": "encoding",
+    "timeToFix": 5,
+    "title": "Enforces UTF-8 file encoding."
+  },
+  {
+    "parameters": [
+      {
+        "description": "file-name-casing",
+        "name": "file-name-casing"
+      }
+    ],
+    "description": "Enforces a consistent file naming convention",
+    "patternId": "file-name-casing",
+    "timeToFix": 5,
+    "title": "Enforces a consistent file naming convention"
+  },
+  {
+    "description": "Ensures proper spacing between import statement keywords",
+    "patternId": "import-spacing",
+    "timeToFix": 5,
+    "title": "Ensures proper spacing between import statement keywords"
+  },
+  {
+    "parameters": [
+      {
+        "description": "increment-decrement",
+        "name": "increment-decrement"
+      }
+    ],
+    "description": "Enforces using explicit += 1 or -= 1 operators.",
+    "patternId": "increment-decrement",
+    "timeToFix": 5,
+    "title": "Enforces using explicit += 1 or -= 1 operators."
+  },
+  {
+    "parameters": [
+      {
+        "description": "interface-name",
+        "name": "interface-name"
+      }
+    ],
+    "description": "Requires interface names to begin with a capital 'I'",
+    "patternId": "interface-name",
+    "timeToFix": 5,
+    "title": "Requires interface names to begin with a capital 'I'"
+  },
+  {
+    "description": "Prefer an interface declaration over a type literal (`type T = { ... }`)",
+    "patternId": "interface-over-type-literal",
+    "timeToFix": 5,
+    "title": "Prefer an interface declaration over a type literal (`type T = { ... }`)"
+  },
+  {
+    "parameters": [
+      {
+        "description": "jsdoc-format",
+        "name": "jsdoc-format"
+      }
+    ],
+    "description": "\nThe following rules are enforced for JSDoc comments (comments starting with `/**`):\n\n* each line contains an asterisk and asterisks must be aligned\n* each asterisk must be followed by either a space or a newline (except for the first and the last)\n* the only characters before the asterisk on each line must be whitespace characters\n* one line comments must start with `/** ` and end with `*/`\n* multiline comments don't allow text after `/** ` in the first line (with option `\"check-multiline-start\"`)\n        ",
+    "patternId": "jsdoc-format",
+    "timeToFix": 5,
+    "title": "Enforces basic format rules for JSDoc comments."
+  },
+  {
+    "description": "\nRequires that a default import have the same name as the declaration it imports.\nDoes nothing for anonymous default exports.",
+    "patternId": "match-default-export-name",
+    "timeToFix": 5,
+    "title": "\nRequires that a default import have the same name as the declaration it imports.\nDoes nothing for anonymous default exports."
+  },
+  {
+    "description": "Requires parentheses when invoking a constructor via the `new` keyword.",
+    "patternId": "new-parens",
+    "timeToFix": 5,
+    "title": "Requires parentheses when invoking a constructor via the `new` keyword."
+  },
+  {
+    "parameters": [
+      {
+        "description": "newline-before-return",
+        "name": "newline-before-return"
+      }
+    ],
+    "description": "Enforces blank line before return when not the only line in the block.",
+    "patternId": "newline-before-return",
+    "timeToFix": 5,
+    "title": "Enforces blank line before return when not the only line in the block."
+  },
+  {
+    "description": "\nRequires that chained method calls be broken apart onto separate lines.",
+    "patternId": "newline-per-chained-call",
+    "timeToFix": 5,
+    "title": "\nRequires that chained method calls be broken apart onto separate lines."
+  },
+  {
+    "description": "Requires the use of `as Type` for type assertions instead of `<Type>`.",
+    "patternId": "no-angle-bracket-type-assertion",
+    "timeToFix": 5,
+    "title": "Requires the use of `as Type` for type assertions instead of `<Type>`."
+  },
+  {
+    "description": "Warns on comparison to a boolean literal, as in `x === true`.",
+    "patternId": "no-boolean-literal-compare",
+    "timeToFix": 5,
+    "title": "Warns on comparison to a boolean literal, as in `x === true`."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-consecutive-blank-lines",
+        "name": "no-consecutive-blank-lines"
+      }
+    ],
+    "description": "Disallows one or more blank lines in a row.",
+    "patternId": "no-consecutive-blank-lines",
+    "timeToFix": 5,
+    "title": "Disallows one or more blank lines in a row."
+  },
+  {
+    "description": "Disallows parameter properties in class constructors.",
+    "patternId": "no-parameter-properties",
+    "timeToFix": 5,
+    "title": "Disallows parameter properties in class constructors."
+  },
+  {
+    "description": "Forbids JSDoc which duplicates TypeScript functionality.",
+    "patternId": "no-redundant-jsdoc",
+    "timeToFix": 5,
+    "title": "Forbids JSDoc which duplicates TypeScript functionality."
+  },
+  {
+    "description": "Don't `<reference types=\"foo\" />` if you import `foo` anyway.",
+    "patternId": "no-reference-import",
+    "timeToFix": 5,
+    "title": "Don't `<reference types=\"foo\" />` if you import `foo` anyway."
+  },
+  {
+    "description": "\nReplaces `x => f(x)` with just `f`.\nTo catch more cases, enable `only-arrow-functions` and `arrow-return-shorthand` too.",
+    "patternId": "no-unnecessary-callback-wrapper",
+    "timeToFix": 5,
+    "title": "\nReplaces `x => f(x)` with just `f`.\nTo catch more cases, enable `only-arrow-functions` and `arrow-return-shorthand` too."
+  },
+  {
+    "description": "Forbids a 'var'/'let' statement or destructuring initializer to be initialized to 'undefined'.",
+    "patternId": "no-unnecessary-initializer",
+    "timeToFix": 5,
+    "title": "Forbids a 'var'/'let' statement or destructuring initializer to be initialized to 'undefined'."
+  },
+  {
+    "description": "Warns when a namespace qualifier (`A.x`) is unnecessary.",
+    "patternId": "no-unnecessary-qualifier",
+    "timeToFix": 5,
+    "title": "Warns when a namespace qualifier (`A.x`) is unnecessary."
+  },
+  {
+    "parameters": [
+      {
+        "description": "no-unnecessary-type-assertion",
+        "name": "no-unnecessary-type-assertion"
+      }
+    ],
+    "description": "Warns if a type assertion does not change the type of an expression.",
+    "patternId": "no-unnecessary-type-assertion",
+    "timeToFix": 5,
+    "title": "Warns if a type assertion does not change the type of an expression."
+  },
+  {
+    "description": "Checks that decimal literals should begin with '0.' instead of just '.', and should not end with a trailing '0'.",
+    "patternId": "number-literal-format",
+    "timeToFix": 5,
+    "title": "Checks that decimal literals should begin with '0.' instead of just '.', and should not end with a trailing '0'."
+  },
+  {
+    "parameters": [
+      {
+        "description": "object-literal-key-quotes",
+        "name": "object-literal-key-quotes"
+      }
+    ],
+    "description": "\nObject literal property names can be defined in two ways: using literals or using strings.\nFor example, these two objects are equivalent:\n\nvar object1 = {\n    property: true\n};\n\nvar object2 = {\n    \"property\": true\n};\n\nIn many cases, it doesn’t matter if you choose to use an identifier instead of a string\nor vice-versa. Even so, you might decide to enforce a consistent style in your code.\n\nThis rules lets you enforce consistent quoting of property names. Either they should always\nbe quoted (default behavior) or quoted only as needed (\"as-needed\").",
+    "patternId": "object-literal-key-quotes",
+    "timeToFix": 5,
+    "title": "Enforces consistent object literal property quote style."
+  },
+  {
+    "parameters": [
+      {
+        "description": "object-literal-shorthand",
+        "name": "object-literal-shorthand"
+      }
+    ],
+    "description": "Enforces/disallows use of ES6 object literal shorthand.",
+    "patternId": "object-literal-shorthand",
+    "timeToFix": 5,
+    "title": "Enforces/disallows use of ES6 object literal shorthand."
+  },
+  {
+    "parameters": [
+      {
+        "description": "one-line",
+        "name": "one-line"
+      }
+    ],
+    "description": "Requires the specified tokens to be on the same line as the expression preceding them.",
+    "patternId": "one-line",
+    "timeToFix": 5,
+    "title": "Requires the specified tokens to be on the same line as the expression preceding them."
+  },
+  {
+    "parameters": [
+      {
+        "description": "one-variable-per-declaration",
+        "name": "one-variable-per-declaration"
+      }
+    ],
+    "description": "Disallows multiple variable definitions in the same declaration statement.",
+    "patternId": "one-variable-per-declaration",
+    "timeToFix": 5,
+    "title": "Disallows multiple variable definitions in the same declaration statement."
+  },
+  {
+    "parameters": [
+      {
+        "description": "ordered-imports",
+        "name": "ordered-imports"
+      }
+    ],
+    "description": "\nEnforce a consistent ordering for ES6 imports:\n- Named imports must be alphabetized (i.e. \"import {A, B, C} from \"foo\";\")\n    - The exact ordering can be controlled by the named-imports-order option.\n    - \"longName as name\" imports are ordered by \"longName\".\n- Import sources must be alphabetized within groups, i.e.:\n        import * as foo from \"a\";\n        import * as bar from \"b\";\n- Groups of imports are delineated by blank lines. You can use this rule to group\n    imports however you like, e.g. by first- vs. third-party or thematically or\n    you can define groups based upon patterns in import path names.",
+    "patternId": "ordered-imports",
+    "timeToFix": 5,
+    "title": "Requires that import statements be alphabetized and grouped."
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-function-over-method",
+        "name": "prefer-function-over-method"
+      }
+    ],
+    "description": "Warns for class methods that do not use 'this'.",
+    "patternId": "prefer-function-over-method",
+    "timeToFix": 5,
+    "title": "Warns for class methods that do not use 'this'."
+  },
+  {
+    "description": "Prefer `foo(): void` over `foo: () => void` in interfaces and types.",
+    "patternId": "prefer-method-signature",
+    "timeToFix": 5,
+    "title": "Prefer `foo(): void` over `foo: () => void` in interfaces and types."
+  },
+  {
+    "description": "Enforces the use of the ES2018 object spread operator over `Object.assign()` where appropriate.",
+    "patternId": "prefer-object-spread",
+    "timeToFix": 5,
+    "title": "Enforces the use of the ES2018 object spread operator over `Object.assign()` where appropriate."
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-switch",
+        "name": "prefer-switch"
+      }
+    ],
+    "description": "Prefer a `switch` statement to an `if` statement with simple `===` comparisons.",
+    "patternId": "prefer-switch",
+    "timeToFix": 5,
+    "title": "Prefer a `switch` statement to an `if` statement with simple `===` comparisons."
+  },
+  {
+    "parameters": [
+      {
+        "description": "prefer-template",
+        "name": "prefer-template"
+      }
+    ],
+    "description": "Prefer a template expression over string literal concatenation.",
+    "patternId": "prefer-template",
+    "timeToFix": 5,
+    "title": "Prefer a template expression over string literal concatenation."
+  },
+  {
+    "description": "Prefer `while` loops instead of `for` loops without an initializer and incrementor.",
+    "patternId": "prefer-while",
+    "timeToFix": 5,
+    "title": "Prefer `while` loops instead of `for` loops without an initializer and incrementor."
+  },
+  {
+    "parameters": [
+      {
+        "description": "quotemark",
+        "name": "quotemark"
+      }
+    ],
+    "description": "Enforces quote character for string literals.",
+    "patternId": "quotemark",
+    "timeToFix": 5,
+    "title": "Enforces quote character for string literals."
+  },
+  {
+    "description": "Prefer `return;` in void functions and `return undefined;` in value-returning functions.",
+    "patternId": "return-undefined",
+    "timeToFix": 5,
+    "title": "Prefer `return;` in void functions and `return undefined;` in value-returning functions."
+  },
+  {
+    "parameters": [
+      {
+        "description": "semicolon",
+        "name": "semicolon"
+      }
+    ],
+    "description": "Enforces consistent semicolon usage at the end of every statement.",
+    "patternId": "semicolon",
+    "timeToFix": 5,
+    "title": "Enforces consistent semicolon usage at the end of every statement."
+  },
+  {
+    "parameters": [
+      {
+        "description": "space-before-function-paren",
+        "name": "space-before-function-paren"
+      }
+    ],
+    "description": "Require or disallow a space before function parenthesis",
+    "patternId": "space-before-function-paren",
+    "timeToFix": 5,
+    "title": "Require or disallow a space before function parenthesis"
+  },
+  {
+    "parameters": [
+      {
+        "description": "space-within-parens",
+        "name": "space-within-parens"
+      }
+    ],
+    "description": "Enforces spaces within parentheses or disallow them.  Empty parentheses () are always allowed.",
+    "patternId": "space-within-parens",
+    "timeToFix": 5,
+    "title": "Enforces spaces within parentheses or disallow them.  Empty parentheses () are always allowed."
+  },
+  {
+    "parameters": [
+      {
+        "description": "switch-final-break",
+        "name": "switch-final-break"
+      }
+    ],
+    "description": "Checks whether the final clause of a switch statement ends in `break;`.",
+    "patternId": "switch-final-break",
+    "timeToFix": 5,
+    "title": "Checks whether the final clause of a switch statement ends in `break;`."
+  },
+  {
+    "parameters": [
+      {
+        "description": "type-literal-delimiter",
+        "name": "type-literal-delimiter"
+      }
+    ],
+    "description": "\nChecks that type literal members are separated by semicolons.\nEnforces a trailing semicolon for multiline type literals.",
+    "patternId": "type-literal-delimiter",
+    "timeToFix": 5,
+    "title": "\nChecks that type literal members are separated by semicolons.\nEnforces a trailing semicolon for multiline type literals."
+  },
+  {
+    "description": "Prevents unnecessary and/or misleading scope bindings on functions.",
+    "patternId": "unnecessary-bind",
+    "timeToFix": 5,
+    "title": "Prevents unnecessary and/or misleading scope bindings on functions."
+  },
+  {
+    "parameters": [
+      {
+        "description": "unnecessary-else",
+        "name": "unnecessary-else"
+      }
+    ],
+    "description": "\nDisallows `else` blocks following `if` blocks ending with a `break`, `continue`, `return`, or `throw` statement.",
+    "patternId": "unnecessary-else",
+    "timeToFix": 5,
+    "title": "\nDisallows `else` blocks following `if` blocks ending with a `break`, `continue`, `return`, or `throw` statement."
+  },
+  {
+    "parameters": [
+      {
+        "description": "variable-name",
+        "name": "variable-name"
+      }
+    ],
+    "description": "Checks variable names for various errors.",
+    "patternId": "variable-name",
+    "timeToFix": 5,
+    "title": "Checks variable names for various errors."
+  },
+  {
+    "parameters": [
+      {
+        "description": "whitespace",
+        "name": "whitespace"
+      }
+    ],
+    "description": "Enforces whitespace style conventions.",
+    "patternId": "whitespace",
+    "timeToFix": 5,
+    "title": "Enforces whitespace style conventions."
+  }
+]

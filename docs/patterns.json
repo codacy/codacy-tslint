@@ -1,0 +1,1390 @@
+{
+  "name": "tslint",
+  "patterns": [
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "adjacent-overload-signatures"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "adjacent-overload-signatures"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            [
+              "Object",
+              "Use {} instead."
+            ],
+            [
+              "String"
+            ]
+          ],
+          "name": "ban-types"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "ban-types"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "ban-ts-ignore"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "member-access"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "member-access"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            {
+              "order": "fields-first"
+            }
+          ],
+          "name": "member-ordering"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "member-ordering"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-any"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-any"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-empty-interface"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-for-in"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-import-side-effect"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-import-side-effect"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-inferrable-types"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-inferrable-types"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-internal-module"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            1,
+            2,
+            3
+          ],
+          "name": "no-magic-numbers"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-magic-numbers"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-namespace"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-namespace"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-non-null-assertion"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-reference"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "name",
+            "length",
+            "event"
+          ],
+          "name": "no-restricted-globals"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-restricted-globals"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-this-assignment"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-this-assignment"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-var-requires"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "only-arrow-functions"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "only-arrow-functions"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "prefer-for-of"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-readonly"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "prefer-readonly"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "promise-function-async"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "promise-function-async"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "call-signature",
+            "parameter",
+            "member-variable-declaration"
+          ],
+          "name": "typedef"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "typedef"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            {
+              "call-signature": "nospace",
+              "index-signature": "nospace",
+              "parameter": "nospace",
+              "property-declaration": "nospace",
+              "variable-declaration": "nospace"
+            },
+            {
+              "call-signature": "onespace",
+              "index-signature": "onespace",
+              "parameter": "onespace",
+              "property-declaration": "onespace",
+              "variable-declaration": "onespace"
+            }
+          ],
+          "name": "typedef-whitespace"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "typedef-whitespace"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "unified-signatures"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "await-promise"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "await-promise"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "ban-comma-operator"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "curly"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "curly"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "forin"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "function-constructor"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "label-position"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-arg"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-async-without-await"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-bitwise"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-conditional-assignment"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "log",
+            "error"
+          ],
+          "name": "no-console"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-console"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-construct"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-debugger"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-duplicate-super"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-duplicate-switch-case"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-duplicate-variable"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-duplicate-variable"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-dynamic-delete"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-empty"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-empty"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-eval"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-floating-promises"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-floating-promises"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-for-in-array"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-implicit-dependencies"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-implicit-dependencies"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-inferred-empty-object-type"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-invalid-template-strings"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-misused-new"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-null-keyword"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-null-undefined-union"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-object-literal-type-assertion"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-object-literal-type-assertion"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-promise-as-boolean"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-promise-as-boolean"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-return-await"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-shadowed-variable"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-shadowed-variable"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-string-literal"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-string-throw"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-sparse-arrays"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-submodule-imports"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-submodule-imports"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-tautology-expression"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-unbound-method"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unbound-method"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-unnecessary-class"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unnecessary-class"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unsafe-any"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unsafe-finally"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-unused-expression"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unused-expression"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-use-before-declare"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-var-keyword"
+    },
+    {
+      "parameters": [
+        {
+          "default": null,
+          "name": "no-void-expression"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-void-expression"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-conditional-expression"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-conditional-expression"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "radix"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "restrict-plus-operands"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "static-this"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "strict-boolean-expressions"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "strict-boolean-expressions"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "strict-string-expressions"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "strict-string-expressions"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "strict-comparisons"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "strict-comparisons"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "strict-type-predicates"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "switch-default"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "triple-equals"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "triple-equals"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "unnecessary-constructor"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "use-default-type-parameter"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "use-isnan"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "cyclomatic-complexity"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "cyclomatic-complexity"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "eofline"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "spaces"
+          ],
+          "name": "indent"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "indent"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "invalid-void"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "LF"
+          ],
+          "name": "linebreak-style"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "linebreak-style"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            1
+          ],
+          "name": "max-classes-per-file"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "max-classes-per-file"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            300
+          ],
+          "name": "max-file-line-count"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "max-file-line-count"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            120
+          ],
+          "name": "max-line-length"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "max-line-length"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-default-export"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            {
+              "fromModules": "^palantir-|^_internal-*|^\\./|^\\.\\./"
+            }
+          ],
+          "name": "no-default-import"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-default-import"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            {
+              "allow-namespace-imports": true
+            }
+          ],
+          "name": "no-duplicate-imports"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-duplicate-imports"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-irregular-whitespace"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-mergeable-namespace"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-parameter-reassignment"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-require-imports"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-trailing-whitespace"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-trailing-whitespace"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "object-literal-sort-keys"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "object-literal-sort-keys"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-const"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "prefer-const"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            {
+              "multiline": "always",
+              "singleline": "never"
+            }
+          ],
+          "name": "trailing-comma"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "trailing-comma"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "parameters",
+            "statements"
+          ],
+          "name": "align"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "align"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "array"
+          ],
+          "name": "array-type"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "array-type"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "arrow-parens"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "arrow-parens"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "arrow-return-shorthand"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "arrow-return-shorthand"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "binary-expression-operand-order"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "callable-types"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "class-name"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "check-space",
+            "check-uppercase",
+            "allow-trailing-lowercase"
+          ],
+          "name": "comment-format"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "comment-format"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "doc",
+            "singleline"
+          ],
+          "name": "comment-type"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "comment-type"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "completed-docs"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "completed-docs"
+    },
+    {
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "deprecation"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "encoding"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "camel-case"
+          ],
+          "name": "file-name-casing"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "file-name-casing"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "import-spacing"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "increment-decrement"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "increment-decrement"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "always-prefix"
+          ],
+          "name": "interface-name"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "interface-name"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "interface-over-type-literal"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "jsdoc-format"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "jsdoc-format"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "match-default-export-name"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "new-parens"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "newline-before-return"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "newline-before-return"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "newline-per-chained-call"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-angle-bracket-type-assertion"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-boolean-literal-compare"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "no-consecutive-blank-lines"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-consecutive-blank-lines"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-parameter-properties"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-redundant-jsdoc"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-reference-import"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unnecessary-callback-wrapper"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unnecessary-initializer"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "no-unnecessary-qualifier"
+    },
+    {
+      "parameters": [
+        {
+          "default": null,
+          "name": "no-unnecessary-type-assertion"
+        }
+      ],
+      "category": "ErrorProne",
+      "level": "Warning",
+      "patternId": "no-unnecessary-type-assertion"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "number-literal-format"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "as-needed"
+          ],
+          "name": "object-literal-key-quotes"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "object-literal-key-quotes"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "object-literal-shorthand"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "object-literal-shorthand"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "check-catch",
+            "check-finally",
+            "check-else"
+          ],
+          "name": "one-line"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "one-line"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "one-variable-per-declaration"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "one-variable-per-declaration"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "ordered-imports"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "ordered-imports"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-function-over-method"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-function-over-method"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-method-signature"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-object-spread"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-switch"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-switch"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "prefer-template"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-template"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "prefer-while"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "single",
+            "avoid-escape",
+            "avoid-template"
+          ],
+          "name": "quotemark"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "quotemark"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "return-undefined"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "always"
+          ],
+          "name": "semicolon"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "semicolon"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "space-before-function-paren"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "space-before-function-paren"
+    },
+    {
+      "parameters": [
+        {
+          "default": null,
+          "name": "space-within-parens"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "space-within-parens"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "switch-final-break"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "switch-final-break"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "type-literal-delimiter"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "type-literal-delimiter"
+    },
+    {
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "unnecessary-bind"
+    },
+    {
+      "parameters": [
+        {
+          "default": true,
+          "name": "unnecessary-else"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "unnecessary-else"
+    },
+    {
+      "parameters": [
+        {
+          "default": {
+            "options": [
+              "ban-keywords",
+              "check-format",
+              "allow-leading-underscore",
+              "allow-pascal-case"
+            ]
+          },
+          "name": "variable-name"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "variable-name"
+    },
+    {
+      "parameters": [
+        {
+          "default": [
+            true,
+            "check-branch",
+            "check-operator",
+            "check-typecast"
+          ],
+          "name": "whitespace"
+        }
+      ],
+      "category": "CodeStyle",
+      "level": "Warning",
+      "patternId": "whitespace"
+    }
+  ],
+  "version": "5.14.0"
+}
