@@ -1,6 +1,6 @@
-FROM node:8-alpine AS build
+ARG BASE_IMAGE=node:16.11.1-alpine
 
-LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
+FROM $BASE_IMAGE AS build
 
 ENV NODE_PATH /usr/lib/node_modules
 
@@ -13,9 +13,7 @@ RUN \
   yarn run build && \
   yarn run docs:gen
 
-FROM node:8-alpine
-
-LABEL maintainer="Rodrigo Fernandes <rodrigo@codacy.com>"
+FROM $BASE_IMAGE
 
 ENV NODE_PATH /app/node_modules
 ENV PATH /app/node_modules/.bin:$PATH
