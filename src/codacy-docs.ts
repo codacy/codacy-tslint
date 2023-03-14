@@ -65,8 +65,7 @@ fs.writeFileSync(
   `${docsPath}/tool-description.md`,
   `TSLint is an extensible static analysis tool that checks TypeScript code for readability,
 maintainability, and functionality errors.
-It is widely supported across modern editors & build systems and can be customized with your own lint rules,
-configurations, and formatters.`
+It is widely supported across modern editors and build systems. [Learn more](https://github.com/palantir/tslint)`
 );
 
 /* tslint:enable:no-expression-statement*/
