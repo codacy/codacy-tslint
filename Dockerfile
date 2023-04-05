@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=node:16.11.1-alpine
+ARG BASE_IMAGE=node:16-alpine3.17
 
 FROM $BASE_IMAGE AS build
 
